@@ -22,7 +22,6 @@ time, mark, audio, video {
 }
 
 .navigation {
-	color: green;
 	background-color: salmon;
 }
 .navigation ul {
@@ -35,8 +34,17 @@ time, mark, audio, video {
 
 .navigation ul li {
 	flex-grow: 1;
-	border: 1px solid orange;
 	font-size: 2em;
 	text-align: center;
+	color: white;
+	text-transform: uppercase;
+
 }
 
+.navigation ul li:hover {
+	background-color: green;
+}
+
+#logo {
+	letter-spacing: 0.2em;
+}
