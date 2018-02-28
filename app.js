@@ -1,29 +1,68 @@
-console.log("Starting Application");
-
 const express = require('express');
 const path = require('path');
+const bodyParser = require('body-parser');
+const exphbs = require('express-handlebars');
+const expressValidator = require('express-validator');
+const flash = require('connect-flash');
+const session = require('express-session');
+const passport = require('passport');
+const mongoose = require('mongoose');
 
+const port = 3000;
+
+// Route Files
+const index = require('./routes/index.js');
+// const users = require('./routes/users.js');
+
+// Init App
 const app = express();
 
-// Set static path.
-app.use(express.static(path.join(__dirname, '/public')));
+// View Engine
+app.engine('handlebars', exphbs({defaultLayout:'main'}));
+app.set('view engine', 'handlebars');
 
+// Body Parser Middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
-app.listen(5000, function(){
-	console.log('listening on port 5000')
+// Express Session
+app.use(session({
+    secret: 'secret',
+    saveUninitialized: true,
+    resave: true
+}));
+
+// Express messages
+app.use(require('connect-flash')());
+app.use((req, res, next) => {
+	res.locals.success_msg = req.flash('success_msg');
+	res.locals.error_msg = req.flash('error_msg');
+	next();
 });
 
-app.get('/' , function (req, res) {
-	res.sendFile(__dirname + '/public/index.html')
+// Express Validator
+app.use(expressValidator({
+  errorFormatter: (param, msg, value) => {
+      var namespace = param.split('.')
+      , root    = namespace.shift()
+      , formParam = root;
+
+    while(namespace.length) {
+      formParam += '[' + namespace.shift() + ']';
+    }
+    return {
+      param : formParam,
+      msg   : msg,
+      value : value
+    };
+  }
+}));
+
+app.use('/', index);
+// app.use('/users', users);
+
+// Start Server
+app.listen(port, () => {
+	console.log('Server started on port '+port);
 });
-
-app.get('/about' , function (req, res) {
-	res.sendFile(__dirname + '/public/about.html')
-});
-
-// app.post('/info', (req, res) => {
-// 	console.log("It worked");
-// 	res.sendFile(__dirname + '/contact.html');
-// })
-
 
