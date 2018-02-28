@@ -1,0 +1,209 @@
+/*CSS Reset - Eric A Meyer*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+#home {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    text-align: center;
+}
+
+#backdrop {
+    max-width: 100%;
+    min-height: 60%;
+    text-align: center;
+    filter: grayscale(65%);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+
+}
+
+#container {
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+  
+
+#content {
+    z-index: 99;
+}
+
+#join-now {
+    background-color:  rgb(72, 140, 180);
+    color: white;
+    width: 100px;
+    height: 30px;
+}
+
+#join-now:hover{
+    background-color:  rgb(72,180,130);
+}
+
+.button-default {
+    border: none;
+    outline: none;
+    font-size: 1em;
+    border-radius: 2px;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 
+                0 2px 2px 0 rgba(0,0,0,.14), 
+                0 1px 5px 0 rgba(0,0,0,.12);
+    cursor: pointer;
+}
+
+#nav button {
+    position: absolute;
+    width: 65px;
+    height: 28px;
+    box-shadow: none;
+    background-color: inherit;
+    font-size: 12px;
+}
+
+#btn-login {
+    right: 10px;
+    top: 10px;
+    color: rgba(180, 72, 72, .8);
+}
+
+#btn-login:hover {
+    background-color: rgba(180, 72, 72, .5);
+    color: #fafafa;
+}
+
+#btn-signup {
+    right: 100px;
+    top: 10px;
+    color:rgba(72,180,130,.8);
+}
+
+#btn-signup:hover {
+    background-color: rgba(72,180,130,.5);
+    color: #fafafa;
+}
+
+#logo {
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 2.8em;
+    color: white;
+    text-shadow: 1px 1px 2px gray;
+    margin-bottom: 10px;
+
+}
+
+#slogan {
+    width: 300px;
+    margin-top: 15px;
+    font-size: 1.5em;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px 1px gray;
+    margin-bottom: 30px;
+}
+
+#nav {
+    height: 50px;
+    font-size: 14px;
+    background-color: #fafafa;
+    font-family: 'Roboto';
+    font-weight: 600;
+    text-align: center;
+    /* box-shadow: 0 0 0.5rem rgba(83,78,76,.5); */
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+#nav li {
+    display: inline-block;
+    list-style: none;
+    margin: 15px 20px 0px 20px;
+    cursor: pointer;
+    height: 33px;
+    width: 50px;
+}
+
+#nav li:hover {
+    border-bottom: #48B482 solid 2px;
+}
+
+#nav ul {
+}
+
+#logoimg {
+    width: 40px;
+    height: 20px;
+    position: absolute;
+    left: 10px;
+    top: 15px;
+}
+
+#signup {
+    background-color: white;
+    width: 220px;
+    height: 300px;
+    position: absolute;
+    top: 99%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+
+
+}
+
+#signup-form input {
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid gray;
+    margin-bottom: 20px;
+    outline: none;
+    font-size: 15px;
+    background-color: inherit;
+}
+
+#signup-form button {
+    margin-top: 20px;
+}
+
+.name-input {
+    width: 90px;
+}
+
+.email-input {
+    width: 180px;
+}
+
+.email-input {
+
+}
+
+#signup-heading {
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 400px;
+    margin-top: 30px;
+    margin-bottom:20px;
+}
+
