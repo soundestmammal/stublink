@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <!-- figure it out -->
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Stublink</title>
-	</head>
-	<link rel="stylesheet" href="public/css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Stublink</title>
+</head>
+<link rel="stylesheet" href="public/css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <body>
 	<div id="header">
 		<img id="logoimg" src="./public/img/chain-link.png" alt="Logo">
@@ -18,10 +20,10 @@
 			<li>Contact</li>
 		</ul>
 
-		<div id="actions">
+		<!-- <div id="actions">
 			<button id="btn-signup" class="button-default">Sign Up</button>
 			<button id="btn-login" class="button-default">Login</button>
-		</div>
+		</div> -->
 	</div>
 
 
@@ -31,33 +33,96 @@
 			<div id="mask"></div>
 			<div id="content">
 				<p id="logo"> Stublink</p>
-				<p id="slogan">Dedicated to finding you the best plus one</p>
+				<p id="slogan">Don't ever go to an event alone again.</p>
 			</div>
 		</div>
 
 		<div id="signup">
 			<div id="signup-heading">Keep up with our development</div>
 			<form id="signup-form" action="signup">
-				<input class="name-input" type="text" placeholder="Firstname">
-				<input class="name-input" type="text" placeholder="Lastname">
-				<!-- <input id="name-input"type="text" placeholder="Name"> -->
-				<input class="email-input"type="email" placeholder="Email">
-				<button id="join-now"class="button-default">Subscribe</button>
+				<!-- <input class="name-input" type="text" placeholder="Firstname">
+				<input class="name-input" type="text" placeholder="Lastname"> -->
+				<input class="email-input" type="text" placeholder="Name">
+				<input class="email-input" type="email" placeholder="Email">
+				<button id="join-now" class="button-default">Subscribe</button>
 			</form>
 		</div>
 	</div>
 
 	<div id="about">
-		<p></p>
+		<div id="description">
+			<p class="about-tittle">
+				Connecting people
+				attending events
+			</p>
+			<p class="about-text">
+				Our main goal is to not have you miss out on an event simply beacuase your laking someone to go with
+			</p>
+		</div>
+			
+		<div id="wont-attend">
+			<img id="no-plusone"src="./public/img/noplusone.png" alt="">
+			<p style="margin-right: 0;">Survey shows that 84% of people wont attend an event their interested in alone</p>
+			<br>
+		</div>
+		<div class="about-text" style="padding-bottom: 45px;max-width: 810px;">
+			But 95% of those people said they where willing to attend the show as long as they had someone to go with
+		</div>
 	</div>
 
-	<div id="blog">
+	<div id="stublink">
+		<img id="about-background"src="./public/img/connections.png" alt="">
 
+		<p class="about-tittle">Stublink's Role</p>
+
+		<p class="about-text" id="stublink-action">With our match making algorithm we will match you up with people 
+			who are looking to attend the same event with similar interest</p>
+		
+		<img id="link-img"src="./public/img/link2.png" alt="">
+
+	</div>
+
+	<div id="ticket-purchase">
+		<p class="about-tittle">Purchase tickets on our app directly</p>
+		<div class="ticket-container">
+			<div id="ticket-left">
+				<p id="benefits-tittle">No need to worry about</p>
+				<ul id="benefits-list">
+					<li>Who's buying the tickets</li>
+					<li>Making sure your tickets are next to each other</li>
+					<li>Purchasing tickets for the other person</li>
+					<li>Worrying about getting payed back</li>
+				</ul>
+			</div>
+			<div id="ticket-right">
+				<p>We handle the ticket purchasing</p>
+				<img class="ticket-img" src="./public/img/buying.png" alt="">
+				<p>Split the cost evenly between the group</p>
+				<img class="ticket-img" src="./public/img/money.png" alt="">
+				<p>Hand out the tickets</p>
+				<img class="ticket-img" src="./public/img/distribute.png" alt="">
+			</div>
+		</div>
 	</div>
 
 	<div id="contact">
-
+		<p class="about-tittle" style="padding-top:30px;">Contact</p>
+		<form id="contact-form" action="contact">
+			<input type="email" name="" id="" placeholder="Email">
+			<textarea rows="4" cols="50" placeholder="Message"></textarea>
+			<br>
+			<button id="join-now" class="button-default">Send</button>
+		</form>
 	</div>
+		
+	<!-- <div id="footer">
+		<ul>
+			<li><img class="footer-icons" src="./public/img/medium.png" alt=""></li>
+			<li><img class="footer-icons" src="./public/img/rmail.png" alt=""></li>
+			<li><img class="footer-icons" src="./public/img/twitter.png" alt=""></li>
+		</ul>
+	</div> -->
 
 </body>
+
 </html>
