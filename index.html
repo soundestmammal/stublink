@@ -6,6 +6,7 @@
 	<title>Stublink</title>
 </head>
 <link rel="stylesheet" href="public/css/style.css">
+<link rel="icon" type="image/png" href="./public/img/favicon.png"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -131,35 +132,35 @@
 </body>
 
 <script> 
-$(document).ready( function() {
-    var topOfOthDiv = $("#content-wrapper").offset().top;
-    var contrTop = $("#home").offset().top;
-	var contrBot = $("#contact").offset().top;
-	
-	// console.log(topOfOthDiv);
-	// console.log(contrTop);
-	// console.log(contrBot);
-	// console.log($(window).scrollTop());
-    $(window).scroll(function() {
-      
-        if($(window).scrollTop() < 430) {
-			$("#nav-home").addClass("nav-active");
-			$("#nav-about").removeClass("nav-active");
-			$("#nav-contact").removeClass("nav-active");
-			$("#nav-blog").removeClass("nav-active");
-        } else if($(window).scrollTop() + $(window).height() == $(document).height()) {
-			$("#nav-home").removeClass("nav-active");
-			$("#nav-about").removeClass("nav-active");
-			$("#nav-contact").addClass("nav-active");
-			$("#nav-blog").removeClass("nav-active");
-        } else if($(window).scrollTop() > contrTop) {
-			$("#nav-home").removeClass("nav-active");
-			$("#nav-about").addClass("nav-active");
-			$("#nav-contact").removeClass("nav-active");
-			$("#nav-blog").removeClass("nav-active");
-        }
-    });
-});
+	$(document).ready( function() {
+		var topOfOthDiv = $("#content-wrapper").offset().top;
+		var contrTop = $("#home").offset().top;
+		var contrBot = $("#contact").offset().top;
+		
+		// console.log(topOfOthDiv);
+		// console.log(contrTop);
+		// console.log(contrBot);
+		// console.log($(window).scrollTop());
+		$(window).scroll(function() {
+		
+			if($(window).scrollTop() < 430) {
+				$("#nav-home").addClass("nav-active");
+				$("#nav-about").removeClass("nav-active");
+				$("#nav-contact").removeClass("nav-active");
+				$("#nav-blog").removeClass("nav-active");
+			} else if($(window).scrollTop() + $(window).height() == $(document).height()) {
+				$("#nav-home").removeClass("nav-active");
+				$("#nav-about").removeClass("nav-active");
+				$("#nav-contact").addClass("nav-active");
+				$("#nav-blog").removeClass("nav-active");
+			} else if($(window).scrollTop() > contrTop) {
+				$("#nav-home").removeClass("nav-active");
+				$("#nav-about").addClass("nav-active");
+				$("#nav-contact").removeClass("nav-active");
+				$("#nav-blog").removeClass("nav-active");
+			}
+		});
+	});
 </script>
 
 </html>
