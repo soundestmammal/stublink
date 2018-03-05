@@ -25,6 +25,11 @@ body {
     font-family: 'Roboto';
 }
 
+a {
+    color: black;
+    text-decoration: none;
+}
+
 /* Header CSS */
 #header {
     height: 50px;
@@ -433,3 +438,8 @@ body {
     margin-top: 10px;
     width: 350px;
 }
+
+.nav-active {
+    border-bottom: #48B482 solid 2px;
+}
+
