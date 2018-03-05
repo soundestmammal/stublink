@@ -443,3 +443,19 @@ a {
     border-bottom: #48B482 solid 2px;
 }
 
+
+.hidden {
+    display: none;
+}
+
+#success-message {
+    margin: auto;
+    width: 210px;
+}
+
+#success-img {
+    margin-top: -20px;
+    margin-bottom: 10px;
+    width: 80px;
+    height: auto;
+}

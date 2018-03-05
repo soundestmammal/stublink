@@ -40,14 +40,21 @@
 		</div>
 
 		<div id="signup">
-			<div id="signup-heading">Keep up with our development</div>
-			<form id="signup-form" action="signup">
+			<div id="signup-form" >
+				<div id="signup-heading">Keep up with our development</div>
 				<!-- <input class="name-input" type="text" placeholder="Firstname">
 				<input class="name-input" type="text" placeholder="Lastname"> -->
-				<input class="email-input" type="text" placeholder="Name">
-				<input class="email-input" type="email" placeholder="Email">
-				<button id="join-now" class="button-default">Subscribe</button>
-			</form>
+				<input class="email-input" type="text" placeholder="Name" required>
+				<input class="email-input" type="email" placeholder="Email" required>
+				<button id="join-now" class="button-default" onclick="subscribe()">Subscribe</button>
+			</div>
+
+			<div id="signup-success" class="hidden">
+				<p class="about-tittle">Success</p>
+				<img id="success-img" src="./public/img/check-mark.png" alt="">
+				<p id="success-message" >You'll now get weekly updates on our development</p>
+			</div>
+
 		</div>
 	</div>
 
@@ -132,6 +139,11 @@
 </body>
 
 <script> 
+
+	function subscribe() {
+		document.getElementById("signup-form").classList.add("hidden");
+		document.getElementById("signup-success").classList.remove("hidden");	
+	}
 	$(document).ready( function() {
 		var topOfOthDiv = $("#content-wrapper").offset().top;
 		var contrTop = $("#home").offset().top;
