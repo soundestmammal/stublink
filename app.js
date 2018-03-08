@@ -8,7 +8,7 @@ const session = require('express-session');
 const passport = require('passport');
 const mongoose = require('mongoose');
 
-const port = 3000;
+const port = 8080;
 
 // Route Files
 const index = require('./routes/index.js');
