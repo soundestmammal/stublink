@@ -1,43 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-	<meta charset="UTF-8">
-	<title>Stublink</title>
-</head>
-<link rel="stylesheet" href="/css/style.css">
-<link rel="icon" type="image/png" href="/img/favicon.png"/>
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div id="header">
+    <img id="logoimg" src="/img/chain-link.png" alt="Logo">
+    <ul id="nav">
+        <a href="#home"><li id="nav-home" class="nav-active">Home</li></a>
+        <a href="#about"> <li id="nav-about" href="#about">About</li> </a>
+        <a href="#contact"> <li id="nav-contact">Contact</li> </a>
+        <li id="nav-blog">Blog</li>
+    </ul>
 
-<body>
-	<div id="header">
-		<img id="logoimg" src="/img/chain-link.png" alt="Logo">
-		<ul id="nav">
-			<a href="#home"><li id="nav-home" class="nav-active">Home</li></a>
-			<a href="#about"> <li id="nav-about" href="#about">About</li> </a>
-			<a href="#contact"> <li id="nav-contact">Contact</li> </a>
-			<li id="nav-blog">Blog</li>
-		</ul>
+    <!-- <div id="actions">
+        <button id="btn-signup" class="button-default">Sign Up</button>
+        <button id="btn-login" class="button-default">Login</button>
+    </div> -->
+</div>
+<div id="content-wrapper">
+    <div id="home">
+        <img id="backdrop" src="/img/concert-audience.jpg" alt="">
+        <div id="container">
+            <div id="mask"></div>
+            <div id="content">
+                <p id="logo"> Stublink</p>
+                <p id="slogan">Don't ever go to an event alone again.</p>
+            </div>
+        </div>
 
-		<!-- <div id="actions">
-			<button id="btn-signup" class="button-default">Sign Up</button>
-			<button id="btn-login" class="button-default">Login</button>
-		</div> -->
-	</div>
+        <div id="signup">
+            <div id="signup-form" >
+                <div id="signup-heading">Keep up with our development</div>
+                <input class="name-input" type="text" placeholder="Firstname" required>
+                <input class="name-input" type="text" placeholder="Lastname" required>
+                {{!-- <input class="email-input" type="text" placeholder="Name" required> --}}
+                <input class="email-input" type="email" placeholder="Email" required>
+                <button id="join-now" class="button-default" onclick="subscribe()">Subscribe</button>
+            </div>
 
-	<div id="content-wrapper">
+            <div id="signup-success" class="hidden">
+                <p class="about-tittle">Success</p>
+                <img id="success-img" src="/img/check-mark.png" alt="">
+                <p id="success-message" >You'll now get weekly updates on our development</p>
+            </div>
 
-	<div id="home">
-		<img id="backdrop" src="/img/concert-audience.jpg" alt="">
-		<div id="container">
-			<div id="mask"></div>
-			<div id="content">
-				<p id="logo"> Stublink</p>
-				<p id="slogan">Don't ever go to an event alone again.</p>
-			</div>
-		</div>
+        </div>
+    </div>
 
 		<div id="signup">
 			<div id="signup-form" >
@@ -53,94 +57,51 @@
 
 			</div>
 
-			<div id="signup-success" class="hidden">
-				<p class="about-tittle">Success</p>
-				<img id="success-img" src="/img/check-mark.png" alt="">
-				<p id="success-message" >You'll now get weekly updates on our development</p>
-			</div>
+    <div id="stublink">
+        <img id="about-background"src="/img/connections.png" alt="">
 
-		</div>
-	</div>
+        <p class="about-tittle">Stublink's Role</p>
 
-	<div id="about">
-		<div id="description">
-			<p class="about-tittle">
-				Connecting people
-				attending events
-			</p>
-			<p class="about-text">
-				Our main goal is to not have you miss out on an event simply beacuase your laking someone to go with
-			</p>
-		</div>
-			
-		<div id="wont-attend">
-			<img id="no-plusone"src="/img/noplusone.png" alt="">
-			<p style="margin-right: 0;">Survey shows that 84% of people wont attend an event their interested in alone</p>
-			<br>
-		</div>
-		<div class="about-text" style="padding-bottom: 45px;max-width: 810px;">
-			But 95% of those people said they where willing to attend the show as long as they had someone to go with
-		</div>
-	</div>
+        <p class="about-text" id="stublink-action">With our match making algorithm we will match you up with people 
+            who are looking to attend the same event with similar interest</p>
+        
+        <img id="link-img"src="/img/link2.png" alt="">
 
-	<div id="stublink">
-		<img id="about-background"src="/img/connections.png" alt="">
+    </div>
 
-		<p class="about-tittle">Stublink's Role</p>
+    <div id="ticket-purchase">
+        <p class="about-tittle">Purchase tickets on our app directly</p>
+        <div class="ticket-container">
+            <div id="ticket-left">
+                <p id="benefits-tittle">No need to worry about</p>
+                <ul id="benefits-list">
+                    <li>Who's buying the tickets</li>
+                    <li>Making sure your tickets are next to each other</li>
+                    <li>Purchasing tickets for the other person</li>
+                    <li>Worrying about getting payed back</li>
+                </ul>
+            </div>
+            <div id="ticket-right">
+                <p>We handle the ticket purchasing</p>
+                <img class="ticket-img" src="/img/buying.png" alt="">
+                <p>Split the cost evenly between the group</p>
+                <img class="ticket-img" src="/img/money.png" alt="">
+                <p>Hand out the tickets</p>
+                <img class="ticket-img" src="/img/distribute.png" alt="">
+            </div>
+        </div>
+    </div>
 
-		<p class="about-text" id="stublink-action">With our match making algorithm we will match you up with people 
-			who are looking to attend the same event with similar interest</p>
-		
-		<img id="link-img"src="/img/link2.png" alt="">
-
-	</div>
-
-	<div id="ticket-purchase">
-		<p class="about-tittle">Purchase tickets on our app directly</p>
-		<div class="ticket-container">
-			<div id="ticket-left">
-				<p id="benefits-tittle">No need to worry about</p>
-				<ul id="benefits-list">
-					<li>Who's buying the tickets</li>
-					<li>Making sure your tickets are next to each other</li>
-					<li>Purchasing tickets for the other person</li>
-					<li>Worrying about getting payed back</li>
-				</ul>
-			</div>
-			<div id="ticket-right">
-				<p>We handle the ticket purchasing</p>
-				<img class="ticket-img" src="/img/buying.png" alt="">
-				<p>Split the cost evenly between the group</p>
-				<img class="ticket-img" src="/img/money.png" alt="">
-				<p>Hand out the tickets</p>
-				<img class="ticket-img" src="/img/distribute.png" alt="">
-			</div>
-		</div>
-	</div>
-
-	<div id="contact">
-		<p class="about-tittle" style="padding-top:30px;">Contact</p>
-		<form id="contact-form" action="contact">
-			<input type="email" name="" id="" placeholder="Email">
-			<textarea rows="4" cols="50" placeholder="Message"></textarea>
-			<br>
-			<button id="join-now" class="button-default">Send</button>
-		</form>
-	</div>
-
-	</div>
-
-	</body>
-		
-	<!-- <div id="footer">
-		<ul>
-			<li><img class="footer-icons" src="/img/medium.png" alt=""></li>
-			<li><img class="footer-icons" src="/img/rmail.png" alt=""></li>
-			<li><img class="footer-icons" src="/img/twitter.png" alt=""></li>
-		</ul>
-	</div> -->
-
-</body>
+    <div id="contact">
+        <p class="about-tittle" style="padding-top:30px;">Contact</p>
+        <form id="contact-form" action="contact">
+            <input type="email" name="" id="" placeholder="Email">
+            <textarea rows="4" cols="50" placeholder="Message"></textarea>
+            <br>
+            <button id="join-now" class="button-default">Send</button>
+        </form>
+    </div>
+</div>
 
 <script> 
 
