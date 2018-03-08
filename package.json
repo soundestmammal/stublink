@@ -1,0 +1,36 @@
+{
+  "name": "stublink",
+  "version": "1.0.0",
+  "description": "a# stublink Stublink - Dev",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soundestmammal/stublink.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soundestmammal/stublink/issues"
+  },
+  "homepage": "https://github.com/soundestmammal/stublink#readme",
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "^1.18.2",
+    "connect-flash": "*",
+    "express": "^4.16.2",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "mongoose": "*",
+    "nodemailer": "^4.6.0",
+    "nodemon": "^1.17.1",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*"
+  }
+}
