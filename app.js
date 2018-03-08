@@ -61,6 +61,9 @@ app.use(expressValidator({
 app.use('/', index);
 // app.use('/users', users);
 
+//Allows static files (local files) to be loaded from public
+app.use(express.static(__dirname + '/public'));
+
 // Start Server
 app.listen(port, () => {
 	console.log('Server started on port '+port);
