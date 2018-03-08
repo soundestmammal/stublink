@@ -27,11 +27,15 @@
         <div id="signup">
             <div id="signup-form" >
                 <div id="signup-heading">Keep up with our development</div>
-                <input class="name-input" type="text" placeholder="Firstname" required>
-                <input class="name-input" type="text" placeholder="Lastname" required>
-                {{!-- <input class="email-input" type="text" placeholder="Name" required> --}}
-                <input class="email-input" type="email" placeholder="Email" required>
-                <button id="join-now" class="button-default" onclick="subscribe()">Subscribe</button>
+                <!-- <input class="name-input" type="text" placeholder="Firstname">
+                <input class="name-input" type="text" placeholder="Lastname"> -->
+                <form action='/register' method="POST">
+                    <input class="email-input" type="text" name="first" placeholder="First Name" required>
+                    <input class="email-input" type="text" name="last" placeholder="Last Name" required>
+                    <input class="email-input" type="email" name ="email" placeholder="Email" required>
+                    <button id="join-now" class="button-default" type="submit" onclick="subscribe()">Subscribe</button>
+                </form>
+
             </div>
 
             <div id="signup-success" class="hidden">
@@ -43,19 +47,20 @@
         </div>
     </div>
 
-		<div id="signup">
+		<!-- <div id="signup">
 			<div id="signup-form" >
 				<div id="signup-heading">Keep up with our development</div>
-				<!-- <input class="name-input" type="text" placeholder="Firstname">
-				<input class="name-input" type="text" placeholder="Lastname"> -->
+				<input class="name-input" type="text" placeholder="Firstname">
+				<input class="name-input" type="text" placeholder="Lastname">
 				<form action='/register' method="POST">
 					<input class="email-input" type="text" name="first" placeholder="First Name" required>
 					<input class="email-input" type="text" name="last" placeholder="Last Name" required>
 					<input class="email-input" type="email" name ="email" placeholder="Email" required>
-					<button id="join-now" class="button-default" type="submit">Subscribe</button>
+					<button id="join-now" class="button-default" type="submit" onclick="subscribe()">Subscribe</button>
 				</form>
 
 			</div>
+        </div> -->
 
     <div id="stublink">
         <img id="about-background"src="/img/connections.png" alt="">
