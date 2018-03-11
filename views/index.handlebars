@@ -14,7 +14,38 @@
     </div> -->
 </div>
 <div id="content-wrapper">
-    <div id="home">
+    <div id="home-p">
+        <div id="container">
+            <div id="mask"></div>
+            <div id="content">
+                <p id="logo"> Stublink</p>
+                <p id="slogan">Don't ever go to an event alone again.</p>
+            </div>
+        </div>
+        <div id="signup">
+            <div id="signup-form" >
+                <div id="signup-heading">Keep up with our development</div>
+                <!-- <input class="name-input" type="text" placeholder="Firstname">
+                <input class="name-input" type="text" placeholder="Lastname"> -->
+                <form action='/register' method="POST">
+                    <input class="name-input" type="text" name="first" placeholder="First Name" required disabled="true">
+                    <input class="name-input" type="text" name="last" placeholder="Last Name" required disabled="true">
+                    <input class="email-input" type="email" name ="email" placeholder="Email" required disabled="true">
+                    <button id="join-now" class="button-default" type="submit" disabled="true">Subscribe</button>
+                </form>
+
+            </div>
+
+            <div id="signup-success" class="hidden">
+                <p class="about-tittle">Success</p>
+                <img id="success-img" src="/img/check-mark.png" alt="">
+                <p id="success-message" >You'll now get weekly updates on our development</p>
+            </div>
+
+        </div>
+    </div>
+
+    {{!-- <div id="home">
         <img id="backdrop" src="/img/concert-audience.jpg" alt="">
         <div id="container">
             <div id="mask"></div>
@@ -45,7 +76,7 @@
             </div>
 
         </div>
-    </div>
+    </div> --}}
 
     <div id="about">
         <div id="description">
@@ -59,17 +90,17 @@
         </div>
         
         <div id="wont-attend">
-        <img id="no-plusone"src="/img/noplusone.png" alt="">
-        <p style="margin-right: 0;">Survey shows that 84% of people wont attend an event their interested in alone</p>
-        <br>
+            <img id="no-plusone"src="/img/noplusone.png" alt="">
+            <p style="margin-right: 0;">Survey shows that 84% of people wont attend an event their interested in alone</p>
+            <br>
         </div>
         <div class="about-text" style="padding-bottom: 45px;max-width: 810px;">
         But 95% of those people said they where willing to attend the show as long as they had someone to go with
         </div>
     </div>
 
-    <div id="stublink">
-        <img id="about-background"src="/img/connections.png" alt="">
+    <div id="stublink-p">
+        {{!-- <img id="about-background"src="/img/connections.png" alt=""> --}}
 
         <p class="about-tittle">Stublink's Role</p>
 
@@ -122,25 +153,26 @@
 	}
 	$(document).ready( function() {
 		var topOfOthDiv = $("#content-wrapper").offset().top;
-		var contrTop = $("#home").offset().top;
-		var contrBot = $("#contact").offset().top;
+		var contrTop = $("#home-p").offset().top;
+		var contrBot = $("#ticket-purchase").offset().top;
 		
-		// console.log(topOfOthDiv);
-		// console.log(contrTop);
-		// console.log(contrBot);
-		// console.log($(window).scrollTop());
+		console.log(topOfOthDiv);
+		console.log(contrTop);
+		console.log(contrBot);
+		console.log($(window).scrollTop());
+
 		$(window).scroll(function() {
 		
-			if($(window).scrollTop() < 430) {
+			if($(window).scrollTop() < 650) {
 				$("#nav-home").addClass("nav-active");
 				$("#nav-about").removeClass("nav-active");
 				$("#nav-contact").removeClass("nav-active");
 				$("#nav-blog").removeClass("nav-active");
-			} else if($(window).scrollTop() + $(window).height() == $(document).height()) {
+			{{!-- } else if($(window).scrollTop() + $(window).height() == $(document).height()) {
 				$("#nav-home").removeClass("nav-active");
 				$("#nav-about").removeClass("nav-active");
 				$("#nav-contact").addClass("nav-active");
-				$("#nav-blog").removeClass("nav-active");
+				$("#nav-blog").removeClass("nav-active"); --}}
 			} else if($(window).scrollTop() > contrTop) {
 				$("#nav-home").removeClass("nav-active");
 				$("#nav-about").addClass("nav-active");

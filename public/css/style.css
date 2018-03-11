@@ -247,7 +247,7 @@ body {
     color: black;
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 650px;
     background-color: white;
     text-align: center;
     border-bottom: solid rgba(128, 128, 128, 0.09) 1px;
@@ -317,6 +317,7 @@ body {
 
 #about-background {
     width: 100%;
+    min-width: 768px;
     height: 500px;
     position: absolute;
     display: block;
@@ -345,7 +346,7 @@ body {
 }
 
 #ticket-purchase {
-    height: 400px;
+    height: 650px;
 }
 
 #ticket-purchase ul li{
@@ -458,4 +459,41 @@ body {
     margin-bottom: 10px;
     width: 80px;
     height: auto;
+}
+
+#home-p {
+    /* The image used */
+    background-image: url('../img/concert-audience.jpg');
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 900px;
+    max-height: 650px;
+    text-align: center;
+    
+}
+
+#stublink-p {
+    /* The image used */
+    background-image: url('../img/connections.png');
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 15px;
+    height: 600px;
+    background-color: #fafafa;
+    text-align: center;
 }
