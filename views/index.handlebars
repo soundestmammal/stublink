@@ -1,82 +1,34 @@
 
-<div id="header">
-    <img id="logoimg" src="/img/chain-link.png" alt="Logo">
-    <ul id="nav">
-        <a href="#home"><li id="nav-home" class="nav-active">Home</li></a>
-        <a href="#about"> <li id="nav-about" href="#about">About</li> </a>
-        <a href="https://twitter.com/Stublinkio" target="_blank"> <li id="nav-contact">Contact</li> </a>
-        <a href="https://medium.com/@stublinkio" target="_blank"><li id="nav-blog">Blog</li></a>
-    </ul>
-
-    <!-- <div id="actions">
-        <button id="btn-signup" class="button-default">Sign Up</button>
-        <button id="btn-login" class="button-default">Login</button>
-    </div> -->
-</div>
 <div id="content-wrapper">
-    <div id="home-p">
-        <div id="container">
-            <div id="mask"></div>
-            <div id="content">
-                <p id="logo"> Stublink</p>
-                <p id="slogan">Never miss out on an event again</p>
+    <div id="home">
+        <div id="header" class="header-flex">
+            <img id="logoimg" src="/img/chain-link.png" alt="Logo">
+            <ul id="nav">
+                <a href="#home"><li id="nav-home">HOME</li></a>
+                <a href="#about"> <li id="nav-about" href="#about">ABOUT</li> </a>
+                <a href="https://twitter.com/Stublinkio" target="_blank"> <li id="nav-contact">CONTACT</li> </a>
+                <a href="https://medium.com/@stublinkio" target="_blank"><li id="nav-blog">BLOG</li></a>
+            </ul>
+        </div>
+        <div id="home-content">
+            <div id="tittle2">
+                <p id="logo2"> Stublink</p>
+                <p id="slogan2">Connecting people to events</p>
+            </div>
+            <div id="signup2">
+                <form action="/register" method="POST">
+                    <input id="email2" type="email" name="email" placeholder="Email">
+                    <button id="subscribe2" class="button-default">Stay Updated</button>
+                </form>
             </div>
         </div>
-        <div id="signup">
-            <div id="signup-form" >
-                <div id="signup-heading">Keep up with our development</div>
-                <!-- <input class="name-input" type="text" placeholder="Firstname">
-                <input class="name-input" type="text" placeholder="Lastname"> -->
-                <form action='/register' method="POST">
-                    <input class="name-input" type="text" name="first" placeholder="First Name" required disabled="true">
-                    <input class="name-input" type="text" name="last" placeholder="Last Name" required disabled="true">
-                    <input class="email-input" type="email" name ="email" placeholder="Email" required disabled="true">
-                    <button id="join-now" class="button-default" type="submit" disabled="true">Subscribe</button>
-                </form>
-
-            </div>
-
-            <div id="signup-success" class="hidden">
-                <p class="about-tittle">Success</p>
-                <img id="success-img" src="/img/check-mark.png" alt="">
-                <p id="success-message" >You'll now get weekly updates on our development</p>
-            </div>
-
+        <div id="arrow-container">
+            <svg class="arrow-down" fill="#000000" height="100" viewBox="0 0 24 24" width="100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+                <path d="M0-.75h24v24H0z" fill="none"/>
+            </svg>
         </div>
     </div>
-
-    {{!-- <div id="home">
-        <img id="backdrop" src="/img/concert-audience.jpg" alt="">
-        <div id="container">
-            <div id="mask"></div>
-            <div id="content">
-                <p id="logo"> Stublink</p>
-                <p id="slogan">Don't ever go to an event alone again.</p>
-            </div>
-        </div>
-
-        <div id="signup">
-            <div id="signup-form" >
-                <div id="signup-heading">Keep up with our development</div>
-                <!-- <input class="name-input" type="text" placeholder="Firstname">
-                <input class="name-input" type="text" placeholder="Lastname"> -->
-                <form action='/register' method="POST">
-                    <input class="name-input" type="text" name="first" placeholder="First Name" required disabled="true">
-                    <input class="name-input" type="text" name="last" placeholder="Last Name" required disabled="true">
-                    <input class="email-input" type="email" name ="email" placeholder="Email" required disabled="true">
-                    <button id="join-now" class="button-default" type="submit" disabled="true">Subscribe</button>
-                </form>
-
-            </div>
-
-            <div id="signup-success" class="hidden">
-                <p class="about-tittle">Success</p>
-                <img id="success-img" src="/img/check-mark.png" alt="">
-                <p id="success-message" >You'll now get weekly updates on our development</p>
-            </div>
-
-        </div>
-    </div> --}}
 
     <div id="about">
         <div id="description">
@@ -96,8 +48,7 @@
     <div id="stublink-p">
         <p class="about-tittle">Stublink's Role</p>
 
-        <p class="about-text" id="stublink-action">With our match making algorithm we will match you up with people 
-            who are looking to attend the same event with similar interest</p>
+        <p class="about-text" id="stublink-action">We will provide you with a live chain of users that are also looking for a link to the event and  a way to buy tickets together.</p>
         
         <img id="link-img"src="/img/link2.png" alt="">
 
@@ -131,54 +82,6 @@
             </div>
         </div>
     </div>
-
-    {{!-- <div id="contact">
-        <p class="about-tittle" style="padding-top:30px;">Contact</p>
-        <form id="contact-form" action="contact">
-            <input type="email" name="" id="" placeholder="Email">
-            <textarea rows="4" cols="50" placeholder="Message"></textarea>
-            <br>
-            <button id="join-now" class="button-default">Send</button>
-        </form>
-    </div> --}}
 </div>
-
-<script> 
-
-	function subscribe() {
-		document.getElementById("signup-form").classList.add("hidden");
-		document.getElementById("signup-success").classList.remove("hidden");	
-	}
-	$(document).ready( function() {
-		var topOfOthDiv = $("#content-wrapper").offset().top;
-		var contrTop = $("#home-p").offset().top;
-		var contrBot = $("#ticket-purchase").offset().top;
-		
-		console.log(topOfOthDiv);
-		console.log(contrTop);
-		console.log(contrBot);
-		console.log($(window).scrollTop());
-
-		$(window).scroll(function() {
-		
-			if($(window).scrollTop() < 650) {
-				$("#nav-home").addClass("nav-active");
-				$("#nav-about").removeClass("nav-active");
-				$("#nav-contact").removeClass("nav-active");
-				$("#nav-blog").removeClass("nav-active");
-			{{!-- } else if($(window).scrollTop() + $(window).height() == $(document).height()) {
-				$("#nav-home").removeClass("nav-active");
-				$("#nav-about").removeClass("nav-active");
-				$("#nav-contact").addClass("nav-active");
-				$("#nav-blog").removeClass("nav-active"); --}}
-			} else if($(window).scrollTop() > contrTop) {
-				$("#nav-home").removeClass("nav-active");
-				$("#nav-about").addClass("nav-active");
-				$("#nav-contact").removeClass("nav-active");
-				$("#nav-blog").removeClass("nav-active");
-			}
-		});
-	});
-</script>
-
+<script src="/js/css.js"></script>
 </html>
