@@ -38,6 +38,11 @@ body {
     font-family: 'Roboto';
 }
 
+h3 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
 /* Header CSS */
 #header {
     height: 50px;
@@ -149,7 +154,7 @@ body {
     cursor: pointer;
 }
 
-#tittle2 {
+#brand {
     color:white;
 }
 
@@ -212,18 +217,28 @@ body {
     fill: rgba(161, 195, 209, 0.596);
 }
 
-/*About CSS*/
+/*problem CSS*/
 
-#about {
+#problem {
     color: black;
     position: relative;
     width: 100%;
     height: 550px;
     color: black;
-    background-color: white;
-    filter: grayscale(10%);
+    background-color: rgb(243, 144, 180);
     border-bottom: solid rgba(128, 128, 128, 0.09) 1px;
     z-index: 10;
+}
+
+.tittle {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+#problem .tittle {
+    padding-top: 80px;
+    color: #F0EBF4;
 }
 
 #description {
@@ -236,7 +251,7 @@ body {
     z-index: 5;
 }
 
-.about-tittle {
+.problem-tittle {
     font-size: 30px;
     font-weight: 900;
     margin: auto;
@@ -244,12 +259,12 @@ body {
     margin-top: 25px;
 }
 
-.about-text {
+.problem-text {
     font-size: 20px;
     width: 80%;
 }
 
-#about-resolve {
+#problem-resolve {
     position: relative;
     text-align: center;
     margin: auto;
@@ -311,7 +326,7 @@ body {
 }
 
 
-#about-background {
+#problem-background {
     width: 100%;
     min-width: 768px;
     height: 500px;

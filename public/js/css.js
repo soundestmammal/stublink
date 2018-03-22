@@ -1,6 +1,6 @@
 $(document).ready( function() {
     var topOfOthDiv = $("#content-wrapper").offset().top;
-    var contrTop = $("#home-p").offset().top;
+    var contrTop = $("#home").offset().top;
     var contrBot = $("#ticket-purchase").offset().top;
     
     console.log(topOfOthDiv);
