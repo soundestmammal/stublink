@@ -161,6 +161,12 @@ h3 {
 #logo2 {
     font-size: 74px;
     font-family: AirStream;
+    margin-bottom: 10px;
+}
+
+#logo-img {
+    height: 80px;
+    margin-bottom: 20px;
 }
 
 #slogan2 {
