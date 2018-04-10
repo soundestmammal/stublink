@@ -185,7 +185,7 @@ h3 {
 #subscribe2 {
     padding-top: 0px;
     padding-bottom: 0px;
-    margin-left: -117px;
+    margin-left: -110px;
     margin-top: -1px;
     box-shadow: none;
     border-radius: 0px;
@@ -195,7 +195,6 @@ h3 {
     height:32px;
     color: white;
     background-color: #F172A1;
-
 }
 
 #subscribe2:hover {
@@ -363,6 +362,15 @@ h3 {
     #home {
         width: 100%;
         min-width: 0px;
+        height: 400px;
+        /* Create the parallax scrolling effect */
+        background-size: auto;
+        background-position-y: top;
+    }
+
+    #payment {
+        min-height: 900px;
+        background-position-y: top;
     }
 
     #header {
@@ -383,7 +391,7 @@ h3 {
     }
 
     #arrow-container{
-        top: 500px;
+        top: 330px;
     }
 
     #problem .tittle {
@@ -422,11 +430,6 @@ h3 {
 
     #payment-benifits ul {
         margin-bottom: 200px;
-    }
-
-    #payment {
-        height: 1000px;
-        max-height: 1200px;
     }
 
 }
