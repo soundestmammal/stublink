@@ -168,6 +168,7 @@ h3 {
 }
 
 #email2 {
+    -webkit-appearance: none;
     border: none;
     outline: none;
     width: 350px;
@@ -431,6 +432,14 @@ h3 {
 
     #payment-benifits ul {
         margin-bottom: 200px;
+    }
+
+    #home-content { 
+        margin-top: 100px;
+    }
+
+    #problem {
+        height: 700px;
     }
 
 }
