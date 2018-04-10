@@ -183,6 +183,7 @@ h3 {
 }
 
 #subscribe2 {
+    -webkit-appearance: none;
     padding-top: 0px;
     padding-bottom: 0px;
     margin-left: -110px;
@@ -430,10 +431,6 @@ h3 {
 
     #payment-benifits ul {
         margin-bottom: 200px;
-    }
-
-    #subscribe2 {
-        height: 34px;
     }
 
 }
