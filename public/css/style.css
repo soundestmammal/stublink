@@ -168,6 +168,7 @@ h3 {
 }
 
 #email2 {
+    -webkit-appearance: none;
     border: none;
     outline: none;
     width: 350px;
@@ -175,6 +176,7 @@ h3 {
     border-radius: 3px;
     padding-left: 10px;
     font-size: 16px;
+    box-sizing: border-box;
 }
 
 #email2:focus::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -183,19 +185,20 @@ h3 {
 }
 
 #subscribe2 {
+    -webkit-appearance: none;
     padding-top: 0px;
     padding-bottom: 0px;
-    margin-left: -117px;
+    margin-left: -110px;
     margin-top: -1px;
     box-shadow: none;
     border-radius: 0px;
     border-bottom-right-radius: 3px;
     border-top-right-radius: 3px;
     border-left: solid 1px rgba(128, 128, 128, 0.479);
-    height:32px;
+    height: 30px;
     color: white;
     background-color: #F172A1;
-
+    box-sizing: border-box;
 }
 
 #subscribe2:hover {
@@ -363,6 +366,15 @@ h3 {
     #home {
         width: 100%;
         min-width: 0px;
+        height: 400px;
+        /* Create the parallax scrolling effect */
+        background-size: auto;
+        background-position-y: top;
+    }
+
+    #payment {
+        min-height: 900px;
+        background-position-y: top;
     }
 
     #header {
@@ -383,7 +395,7 @@ h3 {
     }
 
     #arrow-container{
-        top: 500px;
+        top: 330px;
     }
 
     #problem .tittle {
@@ -424,9 +436,12 @@ h3 {
         margin-bottom: 200px;
     }
 
-    #payment {
-        height: 1000px;
-        max-height: 1200px;
+    #home-content { 
+        margin-top: 100px;
+    }
+
+    #problem {
+        height: 700px;
     }
 
 }
