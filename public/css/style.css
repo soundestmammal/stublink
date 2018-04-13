@@ -373,8 +373,6 @@ h3 {
       width: 253px;
       height: 200px;
   }
-
-
 /* Responsive */
 
 @media screen and (min-width: 920px) {
@@ -390,6 +388,16 @@ h3 {
     .blur {
     }
 
+    input#email2 {
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+    }
+
+    button#subscribe2 {
+        margin-top : 0;
+    }
+
     #home {
         width: 100%;
         min-width: 0px;
@@ -402,7 +410,7 @@ h3 {
     }
 
     #payment {
-        min-height: 900px;
+        min-height: 1400px;
         background-position-y: top;
     }
 
@@ -459,6 +467,7 @@ h3 {
     #live-feed-img {
         margin-bottom: 20px;
     }
+    
 
     #payment-content .tittle {
         font-size: 21px;
@@ -467,14 +476,18 @@ h3 {
 
     #payment-benifits {
         padding-top: 20px;
+        height: 1200px;
     }
 
     #payment-benifits ul li {
-        margin-top: 20px;
+        height: 200px;
+        
     }
 
     #payment-benifits ul {
-        margin-bottom: 200px;
+        height: 600px;
+        display: block;
+
     }
 
 
