@@ -26,6 +26,7 @@
     "express-messages": "*",
     "express-session": "*",
     "express-validator": "*",
+    "firebase": "^4.12.1",
     "mongoose": "*",
     "nodemailer": "^4.6.0",
     "nodemon": "^1.17.1",

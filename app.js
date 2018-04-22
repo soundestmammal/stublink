@@ -7,6 +7,7 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
 const mongoose = require('mongoose');
+const firebase = require('firebase');
 
 const port = 8080;
 
@@ -68,4 +69,38 @@ app.use(express.static(__dirname + '/public'));
 app.listen(port, () => {
 	console.log('Server started on port '+port);
 });
+
+
+// Initialize Firebase
+// var config = {
+//   apiKey: "AIzaSyDdxnmVv8gdWTJmaH77eXU01wtNCSuFeX4",
+//   authDomain: "stublink-emails.firebaseapp.com",
+//   databaseURL: "https://stublink-emails.firebaseio.com",
+//   projectId: "stublink-emails",
+//   storageBucket: "stublink-emails.appspot.com",
+//   messagingSenderId: "50099282405"
+// };
+// firebase.initializeApp(config);
+
+// var ref = firebase.database().ref('stublink-emails');
+
+// var emailRef = ref.child('emails');
+
+// var email = {
+//   email: "chrisrey95@live.com"
+// };
+
+// emailRef.orderByChild("email").equalTo(email.email).once("value", snapshot => {
+//   const emailData = snapshot.val();
+
+//   if (emailData){
+//     console.log("Exist");
+//   } else {
+//     emailRef.push(email);
+//   }
+// })
+
+// emailRef.push({
+//   email: "chrisrey95@gmail.com"
+// });
 
