@@ -80,17 +80,23 @@ app.listen(port, () => {
 //   storageBucket: "stublink-emails.appspot.com",
 //   messagingSenderId: "50099282405"
 // };
+
+// var email = "chris@stublink.io";
+
 // firebase.initializeApp(config);
-
 // var ref = firebase.database().ref('stublink-emails');
-
 // var emailRef = ref.child('emails');
 
-// var email = {
-//   email: "chrisrey95@live.com"
-// };
+// emailRef.orderByChild("email").equalTo(email).once("value", snapshot => {
+//   const emailData = snapshot.val();
+//   emailData?console.log("exist"):emailRef.push({email: email});
+// });
 
-// emailRef.orderByChild("email").equalTo(email.email).once("value", snapshot => {
+
+// var ref = firebase.database().ref('stublink-emails');
+// var emailRef = ref.child('emails');
+
+// emailRef.orderByChild("email").equalTo(email).once("value", snapshot => {
 //   const emailData = snapshot.val();
 
 //   if (emailData){
